@@ -7,19 +7,20 @@ class ContactForm extends Component {
     number: ''
   };
 
+  
   handleChange = (event) => {
     this.setState({ name: event.target.value });
-  };
+      };
 
   handleNumChange = (event) => {
     this.setState({ number: event.target.value });
-  };
+    };
 
 
   handleSubmit = (event) => {
     event.preventDefault();
     this.props.addContact(this.state.name, this.state.number);
-    this.setState({ name: '', number: '' });
+           
   };
 
   render() {
